@@ -12,13 +12,13 @@ const stylesLink = StyleSheet.create({
     //backgroundColor:"red",
     marginTop:10,
     color: '#4A4A4C',
-    fontSize:13.71,
+    fontSize: 13.71,
   }
 }); 
 
 const LinksImportantes = ()=>{
   return(//aqui dentro ficará o nosso JSX
-    <View style={}>
+    <View style={stylesLinksImportantes.container}>
       <LinkItem name="Home"/>
       <LinkItem name="Post"/>
       <LinkItem name="Vídeos"/>
@@ -30,6 +30,12 @@ const LinksImportantes = ()=>{
 
 const stylesLinksImportantes = StyleSheet.create({
   container:{
+    flexDirection:"row",
+    justifyContent:"space-between",
+    paddingHorizontal:40,
+    paddingVertical:10,
+    borderBottomColor:"#F0F0F0",
+    borderBottomWidth:1,
     
   }
 }); 
@@ -38,21 +44,24 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-          <Image source={require("./src/assets/arrow-left.png")}>
+          <Image source={
+              require("./src/assets/arrow-left.png")
+              }>
           </Image>
       <View style={styles.inputTextView}>
-          <Image source={require("./src/assets/ei_search.png")}>
+          <Image source={
+              require("./src/assets/ei_search.png")
+              }>
           </Image>
           <TextInput placeholder="Search"
-          placeholderTextColor="#F5FFFF"
-          style={styles.textInput}>
+                      placeholderTextColor="#F5FFFF"
+                      style={styles.textInput}>
           </TextInput>
       </View>
           <Image source={require("./src/assets/share.png")}>
           </Image>
       </View>
-      <Text>Hello World!</Text>
-      <LinksImportantes/>
+      <LinksImportantes />
       <StatusBar style="auto" />
     </View>
   );
