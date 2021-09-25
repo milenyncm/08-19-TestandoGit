@@ -19,14 +19,34 @@ const stylesLink = StyleSheet.create({
     }
 });
 
+
 const LinksImportantes = ()=>{
-    return(//Aqui dentro ficará o nosso TSX
-        <View style={stylesLinkImportantes.container}>
-            <LinkItem name="Sign Up for Facebook"/>
-        </View>
+        return(
+            <View style={stylesLinkImportantes.container}>
+                <LinkItem name="Login"/>
+            </View>
+        );
+};
+const LinksImportantess = ()=>{
+    return(
+            <View style={stylesLinkImportantess.container}>
+                <LinkItem name="Sign Up for Facebook"/>
+            </View>
     );
 };
+
 const stylesLinkImportantes = StyleSheet.create({
+    container:{
+        flexDirection: "row",
+        justifyContent:"space-between",
+        paddingHorizontal:30,
+        paddingVertical:10,
+        flex:1,
+
+    }
+});
+
+const stylesLinkImportantess = StyleSheet.create({
     container:{
         flexDirection: "row",
         justifyContent:"space-between",
@@ -46,14 +66,7 @@ const Login = () => {
                 }>
             </Image>
             </View>
-            <View style={styles.inputTextView}>
-                <TextInput
-                    placeholder="Facebook"
-                    placeholderTextColor="#F5FFFF"
-                    style={styles.textInput}
-                    >
-                </TextInput>
-            </View>
+
             <View style={styles.inputTextViewEmail}>
                 <TextInput
                     placeholder="Email"
@@ -67,14 +80,6 @@ const Login = () => {
                     placeholder="Password"
                     placeholderTextColor="#A19FA1"
                     style={styles.textInput2}
-                    >
-                </TextInput>
-            </View>
-            <View style={styles.inputTextViewLogin}>
-                <TextInput
-                    placeholder="Log In"
-                    placeholderTextColor="#FFFFFF"
-                    style={styles.textInput3}
                     >
                 </TextInput>
             </View>
@@ -105,14 +110,6 @@ const styles = StyleSheet.create({
         maxWidth:100,
 
     },
-
-    inputTextView:{
-        //flex:1,
-        //backgroundColor:"#213873",
-        height:40,
-        marginHorizontal:10,
-        alignItems: "center",
-    },
     textInput:{
         //color:"#F5FFFF",
         //maxWidth:200,
@@ -133,13 +130,13 @@ const styles = StyleSheet.create({
         marginHorizontal:20,
         //alignItems: "center"
     },
-    inputTextViewLogin:{
+    //inputTextViewLogin:{
         //flex:1,
-        backgroundColor:"#213873",
-        height:50,
-        marginHorizontal:20,
-        alignItems: "center"
-    },
+       // backgroundColor:"#213873",
+        //height:50,
+        //marginHorizontal:20,
+        //alignItems: "center"
+    //},
     textInput1:{
         //color:"#A19FA1",
         //maxWidth:200,
