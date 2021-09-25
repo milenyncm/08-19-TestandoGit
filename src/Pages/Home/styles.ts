@@ -7,7 +7,6 @@ export const stylesLink = StyleSheet.create({
         marginTop:10,
         color: '#4A4A4C',
         fontSize: 13.71,
-
     }
 });
 
@@ -20,7 +19,6 @@ export const stylesLinkImportantes = StyleSheet.create({
 
         borderBottomColor:"#F0F0F0",
         borderBottomWidth:1,
-
     }
 });
 

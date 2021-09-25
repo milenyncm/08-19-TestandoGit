@@ -1,161 +1,44 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, TextInput } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
-import { } from './styles';
+import {View,Text,Image,TextInput,TouchableOpacity} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp, NativeStackScreenProps } from '@react-navigation/native-stack';
+import { StackNavigatorParamList } from '../../../types';
+import {styles} from './styles';
+type LoginProps = NativeStackNavigationProp<StackNavigatorParamList>;
 
-const LinkItem = (props:any)=>{
-    return(
-        <Text style={stylesLink.text}>{props.name}</Text>
-    );
-}
-const stylesLink = StyleSheet.create({
-    text:{
-        //backgroundColor:"red",
-        marginTop:50,
-        color: '#FFFFFF',
-        fontSize: 13.71,
-        alignItems: 'center',
-        flex:1,
-        height:40,
-    }
-});
-
-
-const LinksImportantes = ()=>{
-        return(
-            <View style={stylesLinkImportantes.container}>
-                <LinkItem name="Login"/>
-            </View>
-        );
-};
-const LinksImportantess = ()=>{
-    return(
-            <View style={stylesLinkImportantess.container}>
-                <LinkItem name="Sign Up for Facebook"/>
-            </View>
-    );
-};
-
-const stylesLinkImportantes = StyleSheet.create({
-    container:{
-        flexDirection: "row",
-        justifyContent:"space-between",
-        paddingHorizontal:30,
-        paddingVertical:10,
-        flex:1,
-
-    }
-});
-
-const stylesLinkImportantess = StyleSheet.create({
-    container:{
-        flexDirection: "row",
-        justifyContent:"space-between",
-        paddingHorizontal:30,
-        paddingVertical:10,
-        flex:1,
-
-    }
-});
-
-const Login = () => {
-    return(
-        <View style={styles.container}>
-            <View style={styles.header}>
-            <Image source={
-                    require("../../assets/facebook.png")
-                }>
-            </Image>
-            </View>
-
-            <View style={styles.inputTextViewEmail}>
-                <TextInput
-                    placeholder="Email"
+const Login=()=>{
+	const navigation = useNavigation<LoginProps>();
+	function irParaTelaDeHome() {
+		navigation.navigate('Home');
+	}
+	return (
+		<View style={styles.container}>
+			<View style={styles.header}>
+				<Image style={styles.f} source={
+                    require("../../assets/facebook.png")}>
+                </Image>
+				<Text style={styles.textface}>Facebook</Text>
+			</View>
+			<View style={styles.texts}>
+				<TextInput 
+                    placeholder="Email" 
                     placeholderTextColor="#A19FA1"
-                    style={styles.textInput1}
-                    >
+                    style={styles.Input}>
                 </TextInput>
-            </View>
-            <View style={styles.inputTextViewPassword}>
-                <TextInput
+				<TextInput 
                     placeholder="Password"
                     placeholderTextColor="#A19FA1"
-                    style={styles.textInput2}
-                    >
+                    style={styles.Input}>
                 </TextInput>
-            </View>
-            <LinksImportantes />    
-            <StatusBar style="auto"/>
-        </View>
-    );
+				<View style={styles.login}>
+					<TouchableOpacity style={styles.login} onPress={irParaTelaDeHome}>
+						<Text style={styles.textLogin}>Login</Text>
+					</TouchableOpacity>
+				</View>
+			</View>
+				<Text style={styles.cadastrar}>Sign Up for FaceBook</Text>
+			</View>
+	
+	);
 }
-
-
-
-const styles = StyleSheet.create({
-    container: {
-        flex:1,
-        backgroundColor: '#4369B0',
-
-    },
-
-    header: {
-        minHeight:93,
-        paddingTop:10,
-        flexDirection:"row",
-        justifyContent:"space-between",
-        paddingHorizontal:30,
-        width: 'auto',
-        height: 'auto',
-        maxHeight:200,
-        maxWidth:100,
-
-    },
-    textInput:{
-        //color:"#F5FFFF",
-        //maxWidth:200,
-        //flex:1,
-        //paddingRight:10,
-    },
-    inputTextViewEmail:{
-        //flex:1,
-        backgroundColor:"#FFFFFF",
-        height:50,
-        marginHorizontal:20,
-        //alignItems: "center"
-    },
-    inputTextViewPassword:{
-        //flex:1,
-        backgroundColor:"#FFFFFF",
-        height:50,
-        marginHorizontal:20,
-        //alignItems: "center"
-    },
-    //inputTextViewLogin:{
-        //flex:1,
-       // backgroundColor:"#213873",
-        //height:50,
-        //marginHorizontal:20,
-        //alignItems: "center"
-    //},
-    textInput1:{
-        //color:"#A19FA1",
-        //maxWidth:200,
-        flex:1,
-        //paddingRight:10,
-    },
-    textInput2:{
-        //color:"#F5FFFF",
-        //maxWidth:200,
-        flex:1,
-        //paddingRight:10,
-    },
-    textInput3:{
-        color:"#213873",
-        //maxWidth:200,
-        flex:1,
-        //paddingRight:10,
-    },
-});
-
 export default Login;

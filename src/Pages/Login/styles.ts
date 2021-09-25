@@ -1,60 +1,62 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from "react-native";
 
 export const styles=StyleSheet.create({
 	container:{
-		backgroundColor:"#395185",
+		backgroundColor:"#4369B0",
 		alignItems:'center',
-		height:'100%'
+		height:'100%',
 	},
 	header:{
 		height:100,
 		flexDirection:'row',
-		marginTop:180,
+		marginTop:175,
 		justifyContent:'space-evenly',
 	},
-	logo:{
+	f:{
 		height:40,
 		width:60,
 		padding:30,
+        marginLeft:-45,
 	},
-	textoDaLogo:{
-		fontSize:42,
-		color:'#fff',
+	textface:{
+		fontSize:39,
+		color:'#FFFFFF',
 		fontWeight:'bold',
 		fontFamily:'Roboto',
-		marginLeft:10
+		marginLeft:16,
+        marginTop:5,
 	},
 	Input:{
-		marginVertical:25,
-		width:'80%',
-		backgroundColor:'#fff',
-		height:40,
-		paddingLeft:15
+		marginVertical:18,
+		width:'90%',
+		backgroundColor:'#FFFFFF',
+		height:50,
+		paddingLeft:15,
 	},
-	form:{
+	texts:{
 		alignItems:'center',
 		justifyContent:'center',
 		width:'90%',
 	},
-	button:{
-		width:'70%',
-		justifyContent: 'center',
-		alignItems: 'center',
+	login:{
+		width:'90%',
+		justifyContent:'center',
+		alignItems:'center',
 		height:48,
 		backgroundColor:'#213873',
-		paddingVertical:1
+		paddingVertical:1,
 	},
-	textButton:{
+	textLogin:{
 		textAlign:'center',
 		color:'white',
 		fontSize:20,
-		fontWeight:'bold'
+		fontWeight:'bold',
 	},
-	criar:{
+	cadastrar:{
+        //backgroundColor:"red",
 		fontSize:18,
 		marginVertical:30,
-		color:'#fff',
-		textDecorationLine:'underline'
+		color:'#FFFFFF',
+		textDecorationLine:'underline',
 	}
-})
+});

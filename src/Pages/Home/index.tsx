@@ -2,6 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { stylesLink,  stylesLinkImportantes, styles} from './styles';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import { StackNavigatorParamList } from '../../../types';
 
 const LinkItem = (props:any)=>{
     return(
@@ -10,7 +13,7 @@ const LinkItem = (props:any)=>{
 }
 
 const LinksImportantes = ()=>{
-    return(//Aqui dentro ficará o nosso TSX
+    return(
         <View style={stylesLinkImportantes.container}>
             <LinkItem name="Home"/>
             <LinkItem name="Post"/>
@@ -21,7 +24,14 @@ const LinksImportantes = ()=>{
     );
 };
 
+type HomeProps = NativeStackNavigationProp<StackNavigatorParamList,"Home">;
+
 const Home = () => {
+    const navigation = useNavigation<HomeProps>();
+
+    function irParaTelaLogin(){
+        navigation.navigate('Login');
+    }
     return(
         <View style={styles.container}>
             <View style={styles.header}>
@@ -29,19 +39,18 @@ const Home = () => {
                     require("../../assets/arrow-left.png")
                     }>
                 </Image>
-                <View style={styles.inputTextView}>
-                    <Image source={
-                        require("../../assets/ei_search.png")
-                        }>
-                    </Image>
-                    <TextInput
-                        placeholder="Search"
-                        placeholderTextColor="#F5FFFF"
-                        style={styles.textInput}
-                        >
-
-                    </TextInput>
-                </View>
+            <View style={styles.inputTextView}>
+                <Image source={
+                    require("../../assets/ei_search.png")
+                    }>
+                </Image>
+                <TextInput
+                    placeholder="Search"
+                    placeholderTextColor="#F5FFFF"
+                    style={styles.textInput}
+                >
+                </TextInput>
+            </View>
                 <Image source={
                     require("../../assets/share.png")
                     }>
@@ -50,7 +59,7 @@ const Home = () => {
             <LinksImportantes />
             <StatusBar style="auto"  />
             <View style={styles.conteudoFacebook}>
-                <TouchableOpacity style={styles.meubotao}>
+                <TouchableOpacity style={styles.meubotao} onPress={irParaTelaLogin}>
                     <Text style={styles.meubotaoTexto}>Ir para segunda tela</Text>
                 </TouchableOpacity>
             </View>
