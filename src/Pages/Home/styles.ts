@@ -51,4 +51,21 @@ export const styles = StyleSheet.create({
         flex:1,
         paddingRight:10,
     },
+    meubotao:{
+        backgroundColor:"#4369B0",
+        height:40,
+        alignItems:"center",
+        justifyContent:'center',
+        marginHorizontal:40,
+        borderRadius:10,
+    },
+    conteudoFacebook:{
+        flex:1,
+        // backgroundColor:"#F0F500",
+        justifyContent:'flex-end',
+        paddingVertical:40,
+    },
+    meubotaoTexto:{
+        color:"#F5FFFF",
+    },
 });

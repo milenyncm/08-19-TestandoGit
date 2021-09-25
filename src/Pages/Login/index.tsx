@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TextInput } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import { } from './styles';
 
 const LinkItem = (props:any)=>{
     return(
