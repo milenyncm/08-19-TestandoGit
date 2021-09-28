@@ -5,6 +5,7 @@ import { stylesLink,  stylesLinkImportantes, styles} from './styles';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import { StackNavigatorParamList } from '../../../types';
+import Post from '../../Post';
 
 const LinkItem = (props:any)=>{
     return(
