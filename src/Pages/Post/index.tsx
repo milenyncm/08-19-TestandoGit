@@ -6,7 +6,6 @@ const Post = ()=>{
         <View style={styles.container}>
             <View style={styles.headerPost}>
                 <View style={styles.foto}>
-                
                 </View>
                 <View style={styles.textos}>
                     <Text style={styles.textoPost}>Meu Post</Text>
@@ -45,8 +44,6 @@ const Post = ()=>{
                 </View>
                 
             </View>
-
-            
         </View>
     );
 }
@@ -96,19 +93,19 @@ const styles = StyleSheet.create({
         width:358,
     },
     likes:{
-        marginTop:30,
+        marginTop:15,
         flexDirection:'row',
         alignContent:'center',
     },
     likesTexto:{
-        marginLeft:10,
+        marginLeft:5,
         textAlignVertical:'center',
     },
     linksShare:{
         flexDirection:'row',
         justifyContent:'space-between',
         marginHorizontal:20,
-        marginTop:10,
+        marginTop:15,
     },
     linksShareBloco:{
         flexDirection:'row',
@@ -117,5 +114,6 @@ const styles = StyleSheet.create({
     linksShareBlocoIcone:{
         width:18,
         height:18,
-    }
+        marginLeft:10,
+    },
 });
