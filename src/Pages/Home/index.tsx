@@ -59,11 +59,6 @@ const Home = () => {
             </View>
             <LinksImportantes />
             <StatusBar style="auto"  />
-            <View style={styles.conteudoFacebook}>
-                <TouchableOpacity style={styles.meubotao} onPress={irParaTelaLogin}>
-                    <Text style={styles.meubotaoTexto}>Ir para segunda tela</Text>
-                </TouchableOpacity>
-            </View>
             <ScrollView>
                 <Post />
             </ScrollView>

@@ -8,7 +8,7 @@ const Post = ()=>{
                 <View style={styles.foto}>
                 </View>
                 <View style={styles.textos}>
-                    <Text style={styles.textoPost}>Meu Post</Text>
+                    <Text style={styles.textoPost}>Unblast</Text>
                     <View style={styles.tempoPostagem}>
                         <Text>2hrs</Text>
                         <Image style={styles.imagem}  source={require('../../assets/globo.png')}/>
@@ -45,7 +45,7 @@ const Post = ()=>{
             </View>
             <View style={styles.footerPost}>
                 <TouchableOpacity style={styles.btnLearMore}>
-                    <Text style={styles.btnLearMoreText}> Learn More</Text>
+                    <Text style={styles.btnLearMoreText}>Learn More</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.btnMensagem}>
                     <Image style={{width:16,height:16}} source={require('../../assets/btnmensagem.png')}/>
@@ -132,7 +132,6 @@ const styles = StyleSheet.create({
         marginTop:15,
         height:43,
         flexDirection:'row',
-
     },
     btnLearMore:{
         flex:8,
